@@ -27,7 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: node cli/build -d temp
-    - run: node cli/sync -d temp
+    - run: mkdir ./temp
+    - run: node cli/build -d ./temp
+    - run: node cli/sync -d ./temp
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
