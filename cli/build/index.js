@@ -60,6 +60,12 @@ run(async () => {
   // @type { quotes: Quote[], authors: Author[], tags: Tag[] }
   const db = parseDataFiles(DEST)
 
+  Object.keys(src).forEach(key => {
+    if (typeof db.key === 'undefined') {
+      db[key] = []
+    }
+  })
+
   // Apply transforms to the source data to create the generated data files
   // This will add computed properties that are not included in the source
   // data files.

@@ -33,7 +33,8 @@ try {
   await testConnection()
   log.newLine()
 
-  const dataFiles = parseDataFiles(dataDir.generated)
+  const dataSrc = args.d || args.dest || dataDir.generated
+  const dataFiles = parseDataFiles(dataSrc)
 
   // Connect to the database
   await client.connect()
