@@ -14,7 +14,7 @@ Before running this command, make sure you run the build command to create / upd
 ## Usage 
 
 ```sh
-$ node cli/syncData [<dataDir>] [..options]
+$ node cli/sync [<dataDir>] [..options]
 ```
 
 ## Options 
